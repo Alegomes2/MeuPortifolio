@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio – Alexandre Gomes</title>
+
+    <!-- Google Fonts Modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Modernizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Partículas animadas de fundo -->
+    <div class="particulas"></div>
+
+    <!-- Navegação fixa -->
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header / Introdução -->
+    <header id="inicio" class="cabecalho">
+        <img src="assets/foto-perfil.png" alt="Foto de Alexandre Gomes" class="foto-perfil">
+        <h1>Alexandre Gomes</h1>
+        <p class="cabecalho-paragrafo">Desenvolvedor Front-End | Criando projetos modernos e interativos</p>
+    </header>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <p class="sobre-paragrafo">
+            Sou desenvolvedor front-end apaixonado por criar interfaces modernas, responsivas e interativas.
+            Tenho experiência em HTML, CSS, JavaScript e estou me aprofundando em Node.js e React.
+            Meu objetivo é desenvolver aplicações práticas e impactantes.
+        </p>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <!-- Exemplo de card de projeto -->
+            <div class="projetos-cards">
+                <img src="./assets/Hamburgueria.png" alt="Hamburgueria" class="projetos-imagem">
+                <div class="caixa-textos">
+                    <h3 class="info-projetos">Hamburgueria</h3>
+                    <p class="projetos-paragrafo">Um site de pedidos online, totalmente responsivo, desenvolvido com HTML, CSS e JavaScript.</p>
+                </div>
+            </div>
+
+            <div class="projetos-cards">
+                <img src="./assets/previsaotempoimg.png" alt="Previsão do Tempo" class="projetos-imagem">
+                <div class="caixa-textos">
+                    <h3 class="info-projetos">Previsão do Tempo</h3>
+                    <p class="projetos-paragrafo">Aplicativo web que mostra a previsão do tempo utilizando API pública e JavaScript.</p>
+                </div>
+            </div>
+
+            <a class="projetos-cards" url=" https://alegomes2.github.io/FlappyBird/" >
+                <img src="./assets/projetoFlappybird.png" alt="Flappy Bird" class="projetos-imagem">
+                <div class="caixa-textos">
+                    <h3 class="info-projetos">Flappy Bird</h3>
+                    <p class="projetos-paragrafo">Jogo clássico recriado em JavaScript, com movimentação, colisão e pontuação dinâmica.</p>
+                </div>
+            </a>
+
+            <!-- Adicione os outros projetos seguindo o mesmo padrão -->
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input type="text" placeholder="Nome" class="campo-form" id="nome" required>
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+            </div>
+            <button class="botao-form" type="submit">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
