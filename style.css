@@ -139,7 +139,7 @@ h1 {
 
 .projetos-caixa {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: auto;
@@ -153,7 +153,12 @@ h1 {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+   
+
 }
+
 
 .projetos-cards:hover {
     transform: translateY(-10px) scale(1.05);
@@ -161,18 +166,22 @@ h1 {
 }
 
 .projetos-imagem {
-    width: 100%;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
 .caixa-textos {
+    display: flex;
+    flex-direction: column;
     padding: 1.5rem;
+    flex-grow: 3;
 }
 
 .info-projetos {
     font-weight: bold;
     margin-bottom: 0.5rem;
+    padding: 30px;
 }
 
 .projetos-paragrafo {
@@ -263,4 +272,77 @@ h1 {
     .cabecalho-paragrafo { font-size: 1.2rem; }
     .projetos-caixa { grid-template-columns: 1fr; gap: 1.5rem; }
     .foto-perfil { width: 180px; height: 180px; }
+}
+ 
+.button-link{
+    margin-top: 40px;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: var(--claro);
+    background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+    border: 2px solid var(--vidro);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.img-calculadora {
+    width: 330px;
+}
+ 
+a {
+    text-decoration: none;
+}
+
+/* Efeito hover com animação suave */
+.button-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.5);
+}
+
+/* Brilho animado sobre o botão */
+.button-link::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+    transform: rotate(25deg) translateX(-100%);
+    transition: all 0.7s ease;
+}
+
+.button-link:hover::after {
+    transform: rotate(25deg) translateX(100%);
+}
+
+/* Botões menores ou inline */
+.botao-pequeno {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+
+/* Botões “invertidos” ou outline */
+.button-link{
+    background: transparent;
+    color: var(--primaria);
+    border: 2px solid var(--primaria);
+}
+
+.button-link:hover {
+    background: var(--primaria);
+    color: var(--claro);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+    transform: translateY(-3px) scale(1.05);
 }
